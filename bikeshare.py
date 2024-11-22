@@ -102,11 +102,16 @@ def time_stats(df):
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
-    Day_matching ={1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday",7:"Sunday"}
+    
     # TO DO: display the most common month
+    Day_matching ={1:"January",2:"February",3:"March",4:"April",5:"May",6:"June"}
     popular_month = df['month'].mode()[0]
+    for num,day in Day_matching:
+        if num == popular_day:
+            print("The most popular day was {}".format(num))
     print("The most popular month was {}".format(popular_month))
     # TO DO: display the most common day of week
+    Day_matching ={1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday",7:"Sunday"}
     popular_day = df['day'].mode()[0]
     for num,day in Day_matching:
         if num == popular_day:
