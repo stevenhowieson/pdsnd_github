@@ -102,13 +102,15 @@ def time_stats(df):
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
-
+    Day_matching ={1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday",7:"Sunday"}
     # TO DO: display the most common month
     popular_month = df['month'].mode()[0]
     print("The most popular month was {}".format(popular_month))
     # TO DO: display the most common day of week
     popular_day = df['day'].mode()[0]
-    print("The most popular month was {}".format(popular_month))
+    for num,day in Day_matching:
+        if num == popular_day:
+            print("The most popular day was {}".format(num))
     # TO DO: display the most common start hour
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['hour'] = df['Start Time'].dt.hour
@@ -145,7 +147,7 @@ def trip_duration_stats(df):
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
-
+    
     # TO DO: display total travel time
     #pdb.set_trace()
     Total_travel_time = df['Trip Duration'].sum()
@@ -180,7 +182,8 @@ def user_stats(df):
         print('There is no data available for gender')
   
     # TO DO: Display earliest, most recent, and most common year of birt
-   """This is an if statement that shows there is no data  and tells you there is no data for birth year"""
+    """This is an if statement that shows there is no data  and tells you there is no data for birth year"""
+
     if 'Birth Year' in df.columns: 
         earliest_dob = df['Birth Year'].min()
         latest_dob = df['Birth Year'].max()
