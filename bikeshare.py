@@ -172,7 +172,7 @@ def user_stats(df):
     
     #pdb.set_trace()
     # TO DO: Display counts of gender
-    """This is an if statement that shows there is no data tells you there is no data"""
+    """This is an if statement that shows there is no data tells you there is no data for gender"""
     if 'Gender' in df.columns:
         gender = df['Gender'].value_counts()
         print(gender)
@@ -180,7 +180,7 @@ def user_stats(df):
         print('There is no data available for gender')
   
     # TO DO: Display earliest, most recent, and most common year of birt
-   
+   """This is an if statement that shows there is no data  and tells you there is no data for birth year"""
     if 'Birth Year' in df.columns: 
         earliest_dob = df['Birth Year'].min()
         latest_dob = df['Birth Year'].max()
