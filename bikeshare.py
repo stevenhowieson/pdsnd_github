@@ -160,7 +160,8 @@ def trip_duration_stats(df):
 
 
 def user_stats(df):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users.
+       """
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
@@ -171,17 +172,13 @@ def user_stats(df):
     
     #pdb.set_trace()
     # TO DO: Display counts of gender
-     
+    """This is an if statement that shows there is no data tells you there is no data"""
     if 'Gender' in df.columns:
         gender = df['Gender'].value_counts()
         print(gender)
     else:
         print('There is no data available for gender')
   
-       
-        
-            
-
     # TO DO: Display earliest, most recent, and most common year of birt
    
     if 'Birth Year' in df.columns: 
@@ -194,8 +191,6 @@ def user_stats(df):
     else:
         print('There is no data available for birth year')           
      
-            
-            
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
     #pdb.set_trace()
