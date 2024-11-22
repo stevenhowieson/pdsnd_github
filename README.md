@@ -13,6 +13,7 @@ Describe what your project is about and what it does
 ### Data files: washington.csv, new-york-city.csv and chicago.csv
 Include the files used
 
-### Udacity
+### Credits:Udacity
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
+### Changes: Added for loops to allow the showing of days of the week and months
